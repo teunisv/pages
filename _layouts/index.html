@@ -8,21 +8,22 @@
 </head>
 <body>
   <header>
-    <!-- Add your transparent images here -->
-	<div class='logo' />
+	<div class='logo'>
+	    <!-- Add your transparent images here -->
+	</div>
 	<div class='header-title'>
 		<div class='header-title-outer'>
 			<div class="breadcrumbs">
-				<a href="{{ site.url }}">Home</a>
+				<a href="{{ site.baseurl }}">Home</a>
 				{% assign breadcrumb_paths = page.url | split: '/' %}
 				{% for path in breadcrumb_paths %}
 					{% if path != '' %}
 						{% assign breadcrumb_link = breadcrumb_link | append: '/' | append: path %}
-						{% assign breadcrumb_title = path | replace: '-', ' ' | capitalize %}
+						{% assign breadcrumb_title = path | replace: '-', ' ' | replace: '.html', ' ' | capitalize %}
 						{% if forloop.first == false %}
 							<span class="breadcrumb-separator">►</span>
 						{% endif %}
-						<a href="{{ site.url }}{{ breadcrumb_link }}">{{ breadcrumb_title }}</a>
+						<a href="{{ site.baseurl }}{{ breadcrumb_link }}">{{ breadcrumb_title }}</a>
 					{% endif %}
 				{% endfor %}
 			</div>
