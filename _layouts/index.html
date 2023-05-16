@@ -4,13 +4,34 @@
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
   <!-- Add your CSS stylesheets and other meta tags here -->
-  <!-- <link rel="stylesheet" href="index.css">-->
+  <link rel="stylesheet" href="{{ "/assets/css/index.css" | relative_url }}">
 </head>
 <body>
   <header>
     <!-- Add your transparent images here -->
 	<div class='logo' />
-
+	<div class='header-title'>
+		<div class='header-title-outer'>
+			<div class="breadcrumbs">
+				{% assign breadcrumb_paths = page.url | split: '/' %}
+				{% for path in breadcrumb_paths %}
+					{% if path != '' %}
+						{% assign breadcrumb_link = breadcrumb_link | append: '/' | append: path %}
+						{% assign breadcrumb_title = path | replace: '-', ' ' | capitalize %}
+						{% if forloop.first == false %}
+							<span class="breadcrumb-separator">►</span>
+						{% endif %}
+						{% if forloop.index == 2 %}
+							<a href="{{ site.url }}">Home</a>
+						{% else %}
+							<a href="{{ site.url }}{{ breadcrumb_link }}">{{ breadcrumb_title }}</a>
+						{% endif %}
+					{% endif %}
+				{% endfor %}
+			</div>
+			<div class='header-title-date'>{{ "now" | date: "%d %B %Y om %H:%M" }}</div>
+		</div>
+	</div>
     <div>
       <!-- Add the current date and time here -->
     </div>
