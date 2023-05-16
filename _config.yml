@@ -1,1 +1,9 @@
 baseurl: "/pages"
+
+collections:
+  home:
+    output: true
+    permalink: /home/:title/
+  nieuwsbrief:
+    output: true
+    permalink: /nieuwsbrief/:title/
