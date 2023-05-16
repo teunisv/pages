@@ -1,0 +1,72 @@
+
+
+/* Horizontal Bar Styles */
+.horizontal-bar {
+  /* Add styles for the horizontal bar */
+}
+
+/* Middle Section Styles */
+.middle-section {
+  display: flex;
+  /* Add any additional styles for the middle section */
+}
+
+/* Left Side Styles */
+.left-side {
+  /* Add styles for the left side */
+}
+
+/* Right Side Styles */
+.right-side {
+  /* Add styles for the right side */
+}
+
+/* Footer Styles */
+.footer {
+  /* Add styles for the footer */
+}
+
+body {
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+/* Header Styles */
+.header {
+  background: transparent;
+  /* Add any additional styles for the header */
+}
+
+.logo {
+	background: url(../images/logo.png);
+	height: 250px;
+}
+
+.header-title {
+	padding-left: 10px;
+	border-top: 1px solid #777;
+	border-left: 1px solid #777;
+	border-bottom: 1px solid #777;
+	height: 21px;
+}
+
+.header-title-outer {
+	float: left;
+	width: 80%;
+	margin-bottom: 2px;
+	margin-right: 2px;
+	padding-top: 2px;
+	overflow: hidden;
+}
+
+.header-title-date {
+	float: left;
+	width: 24%;
+	text-align: right;
+}
+
+.breadcrumbs {
+	float: left;
+	width: 75%;
+	text-align: left;
+}
