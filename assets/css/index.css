@@ -6,13 +6,14 @@ a {
 /* Middle Section Styles */
 .middle-section {
   display: flex;
+  width: 100%;
 }
 
 /* Left Side Styles */
 .left-side {
   display: inline-block;
-  white-space: no-wrap;
-  padding: 2px;
+  /*white-space: no-wrap; */
+  padding: 20px;
 }
 
 /* Right Side Styles */
