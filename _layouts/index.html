@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <!-- Add your CSS stylesheets and other meta tags here -->
+</head>
+<body>
+  <header>
+    <!-- Add your transparent images here -->
+    <nav>
+      <!-- Add your navigation links here -->
+    </nav>
+    <div>
+      <!-- Add the current date and time here -->
+    </div>
+  </header>
+
+  <div class="middle-section">
+    <div class="left-side">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/nieuwsbrief">Nieuwsbrief</a></li>
+        <li><a href="/agenda">Agenda</a></li>
+        <li><a href="/wie-zijn-wij">Wie zijn wij</a></li>
+      </ul>
+    </div>
+    <div class="right-side">
+      <!-- This is where the content will be displayed dynamically -->
+      <h1>{{ page.title }}</h1>
+      {{ content }}
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; {{ "now" | date: "%Y" }}</p>
+  </footer>
+
+  <!-- Add your JavaScript files here -->
+
+</body>
+</html>
