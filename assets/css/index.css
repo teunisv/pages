@@ -1,24 +1,24 @@
-
-
-/* Horizontal Bar Styles */
-.horizontal-bar {
-  /* Add styles for the horizontal bar */
+a { 
+	color: #990000;
+	text-decoration: none;
 }
 
 /* Middle Section Styles */
 .middle-section {
   display: flex;
-  /* Add any additional styles for the middle section */
 }
 
 /* Left Side Styles */
 .left-side {
-  /* Add styles for the left side */
+  display: inline-block;
+  white-space: no-wrap;
+  padding: 2px;
 }
 
 /* Right Side Styles */
 .right-side {
-  /* Add styles for the right side */
+  flex: 1;
+  float: left;
 }
 
 /* Footer Styles */
@@ -65,8 +65,17 @@ body {
 	text-align: right;
 }
 
+.header-title-search {
+	float: right;
+	border-left: 1px solid #777;
+	border-right: 1px solid #777;
+	padding: 0px;
+	overflow: hidden;
+}
+
 .breadcrumbs {
 	float: left;
 	width: 75%;
 	text-align: left;
 }
+/* End Header Syles */
