@@ -1,13 +1,29 @@
 function fetchMoreContent() {
-  // Make an AJAX request to fetch additional content
-  // You can use techniques like Fetch API or AJAX libraries like jQuery.ajax
+  // Make an AJAX request to fetch the file list from the GitHub Pages API
+  fetch('https://api.github.com/repos/teunisv/pages/_dynamic')
+    .then((response) => response.json())
+    .then((fileList) => {
+      // Filter out non-Markdown files from the file list
+      const markdownFiles = fileList.filter((file) => file.name.endsWith('.md'));
 
-  // Once the response is received, parse the markdown content and convert it into HTML
-  // You can use a library like Showdown.js or marked.js to convert Markdown to HTML
+      // Loop through the list of Markdown files
+      markdownFiles.forEach((file) => {
+        // Make an AJAX request for each Markdown file
+        fetch(file.download_url)
+          .then((response) => response.text())
+          .then((markdownContent) => {
+            // Convert the fetched markdown content into HTML
+            const htmlContent = marked(markdownContent);
 
-  // Append the HTML content to the #post-container element
-  const postContainer = document.getElementById('post-container');
-  postContainer.innerHTML += '<div>Your dynamically loaded content goes here</div>';
+            // Append the HTML content to the #post-container element
+            const postContainer = document.getElementById('post-container');
+            postContainer.innerHTML += htmlContent;
+          });
+      });
+    })
+    .catch((error) => {
+      console.error('Error fetching content:', error);
+    });
 }
 
 // Attach an event listener to the scroll event
