@@ -21,6 +21,7 @@ a {
   flex: 1;
   float: left;
   overflow-y: auto;
+  max-height: 75vh;
 }
 
 /* Footer Styles */

@@ -1,5 +1,5 @@
 ---
-layout: dynamic
+layout: postpage
 title: Example 2
 ---
 This is the content of Example 2. It can include any Markdown formatting.

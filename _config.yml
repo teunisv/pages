@@ -10,3 +10,6 @@ collections:
   dynamic:
     output: true
     permalink: /dynamic/:title/
+    paginate: 5
+    paginate_path: "/dynamic/page:num/"
+    
