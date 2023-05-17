@@ -1,6 +1,6 @@
 function fetchMoreContent() {
   // Make an AJAX request to fetch the file list from the GitHub Pages API
-  fetch('https://api.github.com/repos/teunisv/pages/_dynamic')
+  fetch('/pages/dynamic.json')
     .then((response) => response.json())
     .then((fileList) => {
       // Filter out non-Markdown files from the file list
