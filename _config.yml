@@ -9,4 +9,4 @@ collections:
     permalink: /nieuwsbrief/:title/
   dynamic:
     output: true
-    permalink: /agenda/:title/
+    permalink: /dynamic/:title/
