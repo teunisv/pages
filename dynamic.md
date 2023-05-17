@@ -2,6 +2,9 @@
 layout: index
 title: Agenda
 ---
+{% assign collection_posts = site.dynamic %}
+{% assign paginator = paginator.collection_posts %}
+
 <div class="posts">
   {% for post in paginator.posts %}
     <h2>{{ post.title }}</h2>
