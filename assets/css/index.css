@@ -45,38 +45,29 @@ body {
 
 .header-title {
 	padding-left: 10px;
-	border-top: 1px solid #777;
-	border-left: 1px solid #777;
-	border-bottom: 1px solid #777;
-	height: 21px;
-}
-
-.header-title-outer {
+	border: 1px solid #777;
+	margin: 2px;
 	float: left;
-	width: 80%;
-	margin-bottom: 2px;
-	margin-right: 2px;
 	padding-top: 2px;
 	overflow: hidden;
 }
 
-.header-title-date {
-	float: left;
-	width: 24%;
-	text-align: right;
-}
-
-.header-title-search {
-	float: right;
-	border-left: 1px solid #777;
-	border-right: 1px solid #777;
-	padding: 0px;
-	overflow: hidden;
-}
-
-.breadcrumbs {
+.header-breadcrumbs {
 	float: left;
 	width: 75%;
 	text-align: left;
 }
+
+.header-title-date {
+	float: left;
+	width: 25%;
+	text-align: right;
+}
+
 /* End Header Syles */
+
+/* Post title */
+.post-title {
+	color: #990000;
+	font-size: 24px;
+}

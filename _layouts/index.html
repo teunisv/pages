@@ -12,25 +12,21 @@
 	    <!-- Add your transparent images here -->
 	</div>
 	<div class='header-title'>
-		<div class='header-title-outer'>
-			<div class="breadcrumbs">
-				<a href="{{ site.baseurl }}">Home</a>
-				{% assign breadcrumb_paths = page.url | split: '/' %}
-				{% for path in breadcrumb_paths %}
-					{% if path != '' %}
-						{% assign breadcrumb_link = breadcrumb_link | append: '/' | append: path %}
-						{% assign breadcrumb_title = path | replace: '-', ' ' | replace: '.html', ' ' | capitalize %}
-						{% if forloop.first == false %}
-							<span class="breadcrumb-separator">►</span>
-						{% endif %}
-						<a href="{{ site.baseurl }}{{ breadcrumb_link }}">{{ breadcrumb_title }}</a>
+		<div class="header-breadcrumbs">
+			<a href="{{ site.baseurl }}">Home</a>
+			{% assign breadcrumb_paths = page.url | split: '/' %}
+			{% for path in breadcrumb_paths %}
+				{% if path != '' %}
+					{% assign breadcrumb_link = breadcrumb_link | append: '/' | append: path %}
+					{% assign breadcrumb_title = path | replace: '-', ' ' | replace: '.html', ' ' | capitalize %}
+					{% if forloop.first == false %}
+						<span class="breadcrumb-separator">►</span>
 					{% endif %}
-				{% endfor %}
-			</div>
-			<div class='header-title-date'>{{ "now" | date: "%d %B %Y om %H:%M" }}</div>
+					<a href="{{ site.baseurl }}{{ breadcrumb_link }}">{{ breadcrumb_title }}</a>
+				{% endif %}
+			{% endfor %}
 		</div>
-		<div class='header-title-search'>
-		</div>
+		<div class='header-title-date'>{{ "now" | date: "%d %B %Y om %H:%M" }}</div>
 	</div>
     <div>
       <!-- Add the current date and time here -->
@@ -48,7 +44,6 @@
     </div>
     <div class="right-side">
       <!-- This is where the content will be displayed dynamically -->
-      <h1>{{ page.title }}</h1>
       {{ content }}
     </div>
   </div>
