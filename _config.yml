@@ -7,3 +7,6 @@ collections:
   nieuwsbrief:
     output: true
     permalink: /nieuwsbrief/:title/
+  dynamic:
+    output: true
+    permalink: /agenda/:title/
