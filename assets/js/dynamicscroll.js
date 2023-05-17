@@ -4,14 +4,11 @@ function fetchMoreContent() {
     .then((response) => response.json())
     .then((fileList) => {
       // Loop through the list of file names
-      fileList.forEach((fileName) => {
-        // Make an AJAX request for each Markdown file
+      fileList.urls.forEach((fileName) => {
+        // Make an AJAX request for each Html file
         fetch(fileName)
           .then((response) => response.text())
-          .then((markdownContent) => {
-            // Convert the fetched markdown content into HTML
-            const htmlContent = marked(markdownContent);
-
+          .then((htmlContent) => {
             // Append the HTML content to the #post-container element
             const postContainer = document.getElementById('post-container');
             postContainer.innerHTML += htmlContent;

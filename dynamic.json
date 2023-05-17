@@ -1,7 +1,9 @@
-[
-  "_dynamic/example1.md",
-  "_dynamic/example2.md",
-  "_dynamic/example3.md",
-  "_dynamic/example4.md",
-  "_dynamic/example5.md"
-]
+{
+  "urls": [
+    "dynamic/example1/index.html",
+    "dynamic/example2/index.html",
+    "dynamic/example3/index.html",
+    "dynamic/example4/index.html",
+    "dynamic/example5/index.html"
+  ]
+}
