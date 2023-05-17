@@ -1,15 +1,12 @@
 function fetchMoreContent() {
-  // Make an AJAX request to fetch the file list from the GitHub Pages API
+  // Make an AJAX request to fetch the file list
   fetch('/pages/dynamic.json')
     .then((response) => response.json())
     .then((fileList) => {
-      // Filter out non-Markdown files from the file list
-      const markdownFiles = fileList.filter((file) => file.name.endsWith('.md'));
-
-      // Loop through the list of Markdown files
-      markdownFiles.forEach((file) => {
+      // Loop through the list of file names
+      fileList.forEach((fileName) => {
         // Make an AJAX request for each Markdown file
-        fetch(file.download_url)
+        fetch(fileName)
           .then((response) => response.text())
           .then((markdownContent) => {
             // Convert the fetched markdown content into HTML
